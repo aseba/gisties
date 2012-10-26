@@ -1,0 +1,6 @@
+grep -l "\[normalPath\]" * | xargs sed -i -E "s/\[normalPath\]/\[images\]\[normal\]/g"
+
+git show experiment:path/to/app.js > app.js
+
+find . -name *.php | xargs egrep -rl --color "\bop_[a-zA-Z\_]*\b" > files
+cat files | xargs perl -pi -w -e 's/(\b)op_([a-zA-Z\_]*)(\b)/$1pr_$2$3/g;'
