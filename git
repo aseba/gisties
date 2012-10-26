@@ -1,0 +1,18 @@
+Add and remove submodules
+edit .gitmodules
+edit .git/config
+git rm --cached {submodule dir}
+
+Init and Update submodules
+git submodule init
+git submodule update
+
+Never Commit Changed Files (But still keep original revisioned.)
+git update-index --assume-unchanged <file>
+
+To make it commitable again
+git update-index --no-assume-unchanged <file>
+
+Viewing Unpushed Git Commits
+git log --branches --not --remotes
+git log --branches --not --remotes --simplify-by-decoration --decorate --oneline
